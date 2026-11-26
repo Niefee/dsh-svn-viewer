@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "entries": {
+    "PRODUCT.md": {
+      "target": "PRODUCT-zh-CN.md",
+      "source_hash": "593eac7112ec4935a6c3df5f209445128e69548f2fd4775057917d31797279ab",
+      "target_hash": "8a1f78f354b29fefe19ee49e700d9250f8dd2c7cb089c53caf470423ef931ba5",
+      "blocks": [
+        "d9204029",
+        "a6b59973",
+        "343a3eb0",
+        "4b5e57f6",
+        "85f9a440",
+        "f202c167",
+        "df73f30c",
+        "5ad8e8ef",
+        "eabd71ad",
+        "cea8b7aa",
+        "ff6b2f9d",
+        "58dcea87",
+        "50eb69c7",
+        "d78abf2e"
+      ],
+      "stamped": "2026-11-20T08:02:46.686Z"
+    }
+  }
+}

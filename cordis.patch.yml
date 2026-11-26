@@ -1,0 +1,4 @@
+# dsh-svn-viewer 的装载行：DSH 启动时把本插件插入插件树。
+- insert:
+    - id: svn-viewer
+      name: '@local/dsh-svn-viewer'

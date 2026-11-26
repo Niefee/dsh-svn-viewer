@@ -1,0 +1,64 @@
+{
+  "name": "@local/dsh-svn-viewer",
+  "version": "0.3.29",
+  "private": true,
+  "type": "module",
+  "description": "SVN read-only file viewer for DeepSeek Harness: browse a working copy or repository, search, preview, inspect history and diffs.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niefee/dsh-svn-viewer.git"
+  },
+  "homepage": "https://github.com/Niefee/dsh-svn-viewer#readme",
+  "bugs": {
+    "url": "https://github.com/Niefee/dsh-svn-viewer/issues"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "docs",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "!docs/assets"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "test": "node test/suite.mjs",
+    "check:live": "node scripts/check-live.mjs",
+    "test:dom": "node test/dom.mjs",
+    "test:render": "node test/render.mjs",
+    "test:client": "node test/client-smoke.mjs && node test/office-browser.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
